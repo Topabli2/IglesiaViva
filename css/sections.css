@@ -1,0 +1,357 @@
+/* ============================================================
+   SECCIONES — Horarios, En Vivo, Misiones, Visión/Misión
+   iglesia-viva/css/sections.css
+============================================================ */
+
+/* ─────────────────────────────────────────────
+   HORARIOS
+───────────────────────────────────────────── */
+.schedules__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.schedule-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.schedule-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--blue-main);
+  border-radius: 4px 0 0 4px;
+}
+
+.schedule-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-med);
+}
+
+.schedule-card__icon {
+  width: 44px;
+  height: 44px;
+  background: var(--blue-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.schedule-card__icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--blue-main);
+  fill: none;
+}
+
+.schedule-card__day {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue-main);
+  margin-bottom: 6px;
+}
+
+.schedule-card__name {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--blue-deeper);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.schedule-card__time {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.schedule-card__desc {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────────
+   TRANSMISIÓN EN VIVO
+───────────────────────────────────────────── */
+.live__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+  align-items: center;
+}
+
+.live__video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-med);
+  background: var(--blue-deeper);
+}
+
+.live__video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.live__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.live__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FEE2E2;
+  color: #991B1B;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 6px 14px;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.live__badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #EF4444;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.3); }
+}
+
+.live__next {
+  background: var(--blue-soft);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  border-left: 3px solid var(--blue-main);
+}
+
+.live__next-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blue-main);
+  margin-bottom: 4px;
+}
+
+.live__next-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ─────────────────────────────────────────────
+   MISIONES
+───────────────────────────────────────────── */
+.missions__intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.missions__qr-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.qr-placeholder {
+  width: 200px;
+  height: 200px;
+  background: var(--blue-soft);
+  border: 2px dashed var(--blue-main);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 16px;
+}
+
+.qr-placeholder svg {
+  width: 36px;
+  height: 36px;
+  stroke: var(--blue-main);
+}
+
+.missions__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.mission-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-med);
+}
+
+.mission-card__img {
+  height: 180px;
+  background: linear-gradient(135deg, var(--blue-mid) 0%, var(--blue-deeper) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.mission-card__body {
+  padding: 26px 24px;
+}
+
+.mission-card__tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blue-main);
+  margin-bottom: 8px;
+}
+
+.mission-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--blue-deeper);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.mission-card__desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ─────────────────────────────────────────────
+   VISIÓN Y MISIÓN
+───────────────────────────────────────────── */
+.visionmision__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.vm-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 48px 40px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.vm-card--vision {
+  background: var(--blue-deeper);
+  color: #fff;
+}
+
+.vm-card__number {
+  font-family: var(--font-serif);
+  font-size: 7rem;
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(32, 78, 147, 0.18);
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  user-select: none;
+}
+
+.vm-card__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue-mid);
+  margin-bottom: 12px;
+}
+
+.vm-card__title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+
+.vm-card--vision .vm-card__title {
+  color: #fff;
+}
+
+.vm-card__text {
+  font-size: 1.02rem;
+  line-height: 1.78;
+  color: var(--text-muted);
+}
+
+.vm-card--vision .vm-card__text {
+  color: rgba(255,255,255,0.72);
+}
+
+.vm-card__verse {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(32, 78, 147, 0.15);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--blue-mid);
+}
+
+.vm-card--vision .vm-card__verse {
+  border-color: rgba(201, 218, 240, 0.3);
+}

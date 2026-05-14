@@ -1,0 +1,202 @@
+/* ============================================================
+   UBICACIÓN & CONTACTO
+   iglesia-viva/css/contact.css
+============================================================ */
+
+/* ─────────────────────────────────────────────
+   UBICACIÓN
+───────────────────────────────────────────── */
+.location__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+  align-items: start;
+}
+
+.location__map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-med);
+  height: 420px;
+  background: var(--blue-soft);
+}
+
+.location__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.location__info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.info-block {
+  display: flex;
+  gap: 16px;
+}
+
+.info-block__icon {
+  width: 44px;
+  height: 44px;
+  background: var(--blue-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-block__icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--blue-main);
+  fill: none;
+}
+
+.info-block__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue-main);
+  margin-bottom: 4px;
+}
+
+.info-block__text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────────
+   CONTACTO
+───────────────────────────────────────────── */
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+}
+
+.contact-link:hover {
+  border-color: var(--blue-main);
+  box-shadow: var(--shadow-med);
+  transform: translateX(4px);
+}
+
+.contact-link__icon {
+  width: 42px;
+  height: 42px;
+  background: var(--blue-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-link__icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--blue-main);
+  fill: none;
+}
+
+.contact-link__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue-main);
+  margin-bottom: 2px;
+}
+
+.contact-link__value {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.contact__form-block {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 36px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.contact__form-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--blue-deeper);
+}
+
+.contact__form-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ─────────────────────────────────────────────
+   REDES SOCIALES
+───────────────────────────────────────────── */
+.social-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.social-btn {
+  width: 44px;
+  height: 44px;
+  background: var(--blue-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.social-btn:hover {
+  background: var(--blue-main);
+  border-color: var(--blue-main);
+}
+
+.social-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--blue-main);
+  fill: none;
+  transition: var(--transition);
+}
+
+.social-btn:hover svg {
+  stroke: #fff;
+}

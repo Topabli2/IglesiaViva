@@ -1,0 +1,55 @@
+/* ============================================================
+   RESPONSIVE — Breakpoints para tablet y móvil
+   iglesia-viva/css/responsive.css
+============================================================ */
+
+/* ── Tablet y pantallas medianas (≤ 900px) ── */
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .hamburger { display: flex; }
+
+  .live__wrapper,
+  .location__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .visionmision__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .missions__intro {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ── Móvil (≤ 600px) ── */
+@media (max-width: 600px) {
+  .section { padding: 64px 0; }
+
+  .hero__title { font-size: clamp(2.4rem, 10vw, 3.5rem); }
+
+  .schedule-card { padding: 24px 20px; }
+
+  .vm-card { padding: 36px 28px; }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

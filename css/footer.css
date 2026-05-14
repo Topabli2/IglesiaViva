@@ -1,0 +1,109 @@
+/* ============================================================
+   FOOTER
+   iglesia-viva/css/footer.css
+============================================================ */
+
+.footer {
+  background: var(--blue-deeper);
+  color: rgba(255,255,255,0.75);
+  padding: 64px 0 32px;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+/* ── Logo del footer ── */
+.footer__logo {
+  margin-bottom: 18px;
+}
+
+.footer__logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  /* Logo negro → blanco sobre fondo oscuro */
+  filter: invert(1) brightness(2);
+  opacity: 0.92;
+}
+
+.footer__tagline {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.55);
+  max-width: 280px;
+}
+
+/* ── Redes en footer ── */
+.footer__social {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.footer__social-btn {
+  width: 38px;
+  height: 38px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: var(--transition);
+}
+
+.footer__social-btn:hover {
+  background: var(--blue-mid);
+  border-color: var(--blue-mid);
+}
+
+.footer__social-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: rgba(255,255,255,0.7);
+  fill: none;
+  transition: var(--transition);
+}
+
+.footer__social-btn:hover svg { stroke: #fff; }
+
+/* ── Columnas de enlaces ── */
+.footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue-light);
+  margin-bottom: 18px;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__link {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  transition: color var(--transition);
+}
+
+.footer__link:hover { color: var(--blue-light); }
+
+/* ── Barra inferior ── */
+.footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.35);
+  flex-wrap: wrap;
+  gap: 12px;
+}

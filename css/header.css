@@ -1,0 +1,170 @@
+/* ============================================================
+   HEADER & NAVEGACIÓN
+   iglesia-viva/css/header.css
+============================================================ */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(32,78,147,0.12), var(--shadow-soft);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Logo ── */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  /* Logo negro → blanco sobre header transparente (encima del video) */
+  filter: invert(1) brightness(2);
+  transition: filter var(--transition), opacity var(--transition);
+  flex-shrink: 0;
+}
+
+.header.scrolled .logo__img {
+  /* Header blanco → logo en color original */
+  filter: none;
+}
+
+@media (max-width: 600px) {
+  .logo__img { height: 80px; }
+}
+
+/* ── Navegación desktop ── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav__link {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.88);
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.header.scrolled .nav__link {
+  color: var(--text-muted);
+}
+
+.nav__link:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+}
+
+.header.scrolled .nav__link:hover {
+  color: var(--blue-main);
+  background: var(--blue-light);
+}
+
+.nav__cta {
+  margin-left: 8px;
+  padding: 9px 22px;
+  background: var(--blue-main);
+  color: #fff;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav__cta:hover {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+}
+
+/* ── Hamburguesa ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+  border: none;
+  background: none;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.header.scrolled .hamburger span {
+  background: var(--blue-deeper);
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Menú móvil ── */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(253, 253, 253, 0.359);
+  backdrop-filter: blur(16px);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.mobile-nav.open {
+  display: flex;
+}
+
+.mobile-nav .nav__link {
+  color: var(--blue-deeper);
+  font-size: 1.4rem;
+  font-family: var(--font-serif);
+  padding: 14px 30px;
+  letter-spacing: 0.02em;
+}
+
+.mobile-nav .nav__link:hover {
+  color: var(--blue-main);
+  background: none;
+}
+
+.mobile-nav .nav__cta {
+  margin-top: 16px;
+  font-size: 1rem;
+  padding: 14px 36px;
+}

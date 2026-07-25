@@ -101,7 +101,8 @@
 .live__video {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
+  /* 16:9 */
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-med);
@@ -146,8 +147,17 @@
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.5; transform: scale(1.3); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.3);
+  }
 }
 
 .live__next {
@@ -196,10 +206,10 @@
 }
 
 .qr-placeholder {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 250px;
   background: var(--blue-soft);
-  border: 2px dashed var(--blue-main);
+  border: 2px solid var(--blue-main);
   border-radius: var(--radius-sm);
   display: flex;
   flex-direction: column;
@@ -354,7 +364,7 @@
 }
 
 .vm-card--vision .vm-card__text {
-  color: rgba(255,255,255,0.72);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .vm-card__verse {

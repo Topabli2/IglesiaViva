@@ -1,0 +1,131 @@
+/* Sección General */
+.seccion-eventos {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contenedor-eventos h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo-eventos {
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+/* Carrusel */
+.carrusel-contenedor {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carrusel-track-contenedor {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carrusel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Tarjeta de Evento */
+.evento-card {
+  min-width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.evento-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.evento-info {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.evento-info h3 {
+  color: #0f2647;
+  /* Color de acento de tu iglesia */
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.evento-fecha {
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.evento-info p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Botones */
+.carrusel-btn {
+  background: rgba(44, 62, 80, 0.8);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+  flex-shrink: 0;
+}
+
+.carrusel-btn:hover {
+  background: #e67e22;
+}
+
+/* Indicadores (puntitos) */
+.carrusel-indicadores {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.indicador {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #bdc3c7;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.indicador.activo {
+  background: #e67e22;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .evento-card img {
+    height: 200px;
+  }
+
+  .carrusel-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}

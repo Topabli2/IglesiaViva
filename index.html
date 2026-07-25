@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/carrusel.css" />
   </head>
   <body>
     <!-- ============================================================
@@ -135,7 +136,7 @@
           <div class="section-header">
             <p class="section-label">Reuniones semanales</p>
             <h2 class="section-title" id="horarios-title">
-              Nuestros <em>Horarios</em>
+              Proximas <em>Reuniones</em>
             </h2>
             <div class="divider"></div>
             <p class="section-desc">
@@ -145,115 +146,26 @@
             </p>
           </div>
 
-          <div class="schedules__grid">
-            <article class="schedule-card">
-              <div class="schedule-card__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
-                </svg>
-              </div>
-              <p class="schedule-card__day">Domingo</p>
-              <h3 class="schedule-card__name">Reunión Principal</h3>
-              <p class="schedule-card__time">11:00 AM — 13:00 PM</p>
-              <p class="schedule-card__desc">
-                Alabanza, palabra y comunión con toda la familia junto a un buen
-                café☕.
-              </p>
-            </article>
-
-            <article class="schedule-card">
-              <div class="schedule-card__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              </div>
-              <p class="schedule-card__day">Miércoles por medio (27-05-2026)</p>
-              <h3 class="schedule-card__name">Aprehender</h3>
-              <p class="schedule-card__time">7:30 PM</p>
-              <p class="schedule-card__desc">
-                Reuniones de comunidad para estudio bíblico, oración y amistad.
-                <br />
-                <br />
-                <strong>Dirección: <br /></strong>
-                Regimiento Cazadores #1222, Providencia.
-              </p>
-            </article>
-
-            <article class="schedule-card">
-              <div class="schedule-card__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 20V10" />
-                  <path d="M12 20V4" />
-                  <path d="M6 20v-6" />
-                </svg>
-              </div>
-              <p class="schedule-card__day">
-                Jueves por medio <br />(04-06-2026)
-              </p>
-              <h3 class="schedule-card__name">Oracion</h3>
-              <p class="schedule-card__time">7:30 PM — 9:30 PM</p>
-              <p class="schedule-card__desc">
-                Un espacio donde nos juntamos a orar por nuestras vidas, la
-                iglesia y las necesidades presentes en nuestro entorno. <br />
-                <br />
-                <strong>Dirección: <br /></strong>
-                Seminario 519, Providencia.
-              </p>
-            </article>
-
-            <article class="schedule-card">
-              <div class="schedule-card__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                  />
-                  <polyline points="14 2 14 8 20 8" />
-                  <line x1="16" y1="13" x2="8" y2="13" />
-                  <line x1="16" y1="17" x2="8" y2="17" />
-                  <polyline points="10 9 9 9 8 9" />
-                </svg>
-              </div>
-              <p class="schedule-card__day">Sábado</p>
-              <br />
-              <h3 class="schedule-card__name">Crecer</h3>
-              <p class="schedule-card__time">10:30 AM</p>
-              <p class="schedule-card__desc">
-                ¿Quieres conocer en que creemos y quienes somos? Este es el
-                espacio para ti, donde podrás aprender sobre nuestra fe.<br />
-                <br />
-                <strong>Dirección: <br /></strong>
-                Seminario 519, Providencia.
-              </p>
-            </article>
-          </div>
+          <section id="eventos-semanales" class="seccion-eventos">
+  <div class="contenedor-eventos">
+    <div class="carrusel-contenedor">
+      <button class="carrusel-btn prev" aria-label="Evento anterior">&#10094;</button>
+      
+      <div class="carrusel-track-contenedor">
+        <div class="carrusel-track" id="carrusel-track">
+          <!-- El contenido se generará automáticamente con JS -->
         </div>
-      </section>
-      <!-- FIN SECCIÓN HORARIOS -->
-
+      </div>
+      
+      <button class="carrusel-btn next" aria-label="Evento siguiente">&#10095;</button>
+    </div>
+    
+    <div class="carrusel-indicadores" id="carrusel-indicadores">
+      <!-- Los puntos indicadores se generan con JS -->
+    </div>
+  </div>
+</section>
+          
       <!-- ============================================================
          SECCIÓN TRANSMISIÓN EN VIVO
     ============================================================ -->
@@ -392,44 +304,24 @@
                 "
               >
                 Tu apoyo financiero permite sostener a nuestros misioneros,
-                enviar equipos, y llevar esperanza a lugares donde más se
+                enviar equipos y llevar esperanza a lugares donde más se
                 necesita.
               </p>
-              <a
-                href="URL_YOUTUBE_LIVE"
-                class="btn btn--primary"
-                target="_blank"
-                rel="noopener"
-              >
-                Apoyar las misiones
-              </a>
             </div>
 
             <!-- QR de donaciones: reemplaza QR_DONACIONES con la URL de tu imagen QR -->
             <div class="missions__qr-block">
-              <p class="section-label">Escanea para aportar</p>
+              <p class="section-label">Si deseas puedes ser parte haciendo una ofrenda a la siguiente cuenta</p>
               <div
                 class="qr-placeholder"
                 role="img"
                 aria-label="Código QR para donaciones"
               >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="3" y="3" width="7" height="7" />
-                  <rect x="14" y="3" width="7" height="7" />
-                  <rect x="3" y="14" width="7" height="7" />
-                  <rect x="14" y="14" width="3" height="3" />
-                  <rect x="18" y="18" width="3" height="3" />
-                </svg>
+
                 <!-- Reemplaza este bloque con:
                    <img src="QR_DONACIONES" alt="QR de donaciones" width="160" height="160" />
               -->
-                <span>QR_DONACIONES<br />Reemplaza con<br />tu imagen QR</span>
+                <span><strong>Nombre:</strong> <br />Iglesia Viva<br /><strong>Banco:</strong><br /> Banco Estado<br /><strong>Numero de cuenta:</strong><br /> 34371645219 <strong><br />Rut</strong><br />70.019.800-6<strong><br />Correo</strong><br />finanzas@iglesiaviva.cl<br /></span>
               </div>
               <p
                 style="
@@ -437,10 +329,10 @@
                   color: var(--text-muted);
                   text-align: center;
                   max-width: 200px;
-                  line-height: 1.6;
+                  line-height: .6;
                 "
               >
-                Escanea el código con tu celular para realizar tu aporte
+                Gracias por tu generosidad 🙌🏻
               </p>
             </div>
           </div>

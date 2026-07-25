@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "titulo": "Reunión principal",
+    "fecha": "Domingos 11:00 hrs / Av. Alcalde Jorge Mockeberg 581, Ñuñoa",
+    "descripcion": "Alabanza, palabra y comunión con toda la familia junto a un buen café☕. ¡Trae a un amigo!",
+    "imagen": "assets/img/reunion.avif",
+    "activo": true
+  },
+  {
+    "id": 2,
+    "titulo": "Reunión de Oración",
+    "fecha": "Jueves a las 19:30 hrs / Seminario 519, Providencia.",
+    "descripcion": "Un espacio donde nos juntamos a orar por nuestras vidas, la iglesia y las necesidades presentes en nuestro entorno",
+    "imagen": "assets/img/biblia.avif",
+    "activo": true
+  },
+  {
+    "id": 3,
+    "titulo": "Reunión de Oración",
+    "fecha": "Miércoles 19:30 hrs / Seminario 519, Providencia. ",
+    "descripcion": "Un espacio donde nos juntamos a orar por nuestras vidas, la iglesia y las necesidades presentes en nuestro entorno.",
+    "imagen": "assets/img/Pray.webp",
+    "activo": false
+  }
+]

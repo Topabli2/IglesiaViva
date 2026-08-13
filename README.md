@@ -199,10 +199,10 @@ href="https://wa.me/56912345678"
 
 Busca y reemplaza los siguientes placeholders:
 
-| Placeholder | Ejemplo de valor |
-|---|---|
-| `INSTAGRAM_IGLESIA` | `iglesjaviva` |
-| `FACEBOOK_IGLESIA` | `iglesjaviva` |
+| Placeholder                       | Ejemplo de valor                   |
+| --------------------------------- | ---------------------------------- |
+| `INSTAGRAM_IGLESIA`               | `iglesjaviva`                      |
+| `FACEBOOK_IGLESIA`                | `iglesjaviva`                      |
 | `URL_YOUTUBE_LIVE` (botón social) | `https://youtube.com/@iglesjaviva` |
 
 ---
@@ -218,7 +218,7 @@ El sitio incluye dos placeholders de QR. Reemplaza cada bloque `.qr-placeholder`
 
 **QR del formulario de contacto** (sección Contacto):
 ```html
-<img src="assets/img/qr-formulario.png" alt="QR formulario de contacto" width="160" height="160" />
+<img src="assets/img/qr-formulario.svg" alt="QR formulario de contacto" width="160" height="160" />
 ```
 
 ---
@@ -227,18 +227,18 @@ El sitio incluye dos placeholders de QR. Reemplaza cada bloque `.qr-placeholder`
 
 Todos los colores están centralizados en `css/variables.css`. Para modificar cualquier tono, edita **solo ese archivo** y el cambio se propaga automáticamente a todo el sitio.
 
-| Variable | Hex | Uso principal |
-|---|---|---|
-| `--blue-main` | `#204e93` | Botones, acentos, iconos, bordes destacados |
-| `--blue-dark` | `#163768` | Hover y estados activos |
-| `--blue-deeper` | `#0f2647` | Footer, hero fallback, textos clave |
-| `--blue-mid` | `#2d65b8` | Gradientes, etiquetas de tarjetas |
-| `--blue-light` | `#dce8f7` | Fondos de iconos, tarjetas suaves |
-| `--blue-soft` | `#eef4fb` | Fondo de secciones alternativas |
-| `--cream` | `#f5f7fa` | Fondo general de la página |
-| `--text-main` | `#0f2647` | Texto principal |
-| `--text-muted` | `#4a6080` | Texto secundario |
-| `--text-light` | `#7a96b4` | Texto terciario / metadatos |
+| Variable        | Hex       | Uso principal                               |
+| --------------- | --------- | ------------------------------------------- |
+| `--blue-main`   | `#204e93` | Botones, acentos, iconos, bordes destacados |
+| `--blue-dark`   | `#163768` | Hover y estados activos                     |
+| `--blue-deeper` | `#0f2647` | Footer, hero fallback, textos clave         |
+| `--blue-mid`    | `#2d65b8` | Gradientes, etiquetas de tarjetas           |
+| `--blue-light`  | `#dce8f7` | Fondos de iconos, tarjetas suaves           |
+| `--blue-soft`   | `#eef4fb` | Fondo de secciones alternativas             |
+| `--cream`       | `#f5f7fa` | Fondo general de la página                  |
+| `--text-main`   | `#0f2647` | Texto principal                             |
+| `--text-muted`  | `#4a6080` | Texto secundario                            |
+| `--text-light`  | `#7a96b4` | Texto terciario / metadatos                 |
 
 ---
 
@@ -260,15 +260,15 @@ Para cambiar las fuentes, actualiza el `<link>` de Google Fonts y las variables 
 
 ## Secciones del sitio
 
-| ID de ancla | Sección | Descripción |
-|---|---|---|
-| `#inicio` | Hero | Video de fondo, título principal y botones de acción |
-| `#horarios` | Horarios | Tarjetas con los 4 cultos semanales |
-| `#en-vivo` | Transmisión en vivo | Embed de YouTube y datos de próxima transmisión |
-| `#misiones` | Misiones | Proyectos misioneros y QR de donaciones |
-| `#vision` | Visión y Misión | Declaraciones con versículos bíblicos |
-| `#ubicacion` | Ubicación | Mapa de Google Maps e información práctica |
-| `#contacto` | Contacto | Teléfono, email, WhatsApp, redes y QR del formulario |
+| ID de ancla  | Sección             | Descripción                                          |
+| ------------ | ------------------- | ---------------------------------------------------- |
+| `#inicio`    | Hero                | Video de fondo, título principal y botones de acción |
+| `#horarios`  | Horarios            | Tarjetas con los 4 cultos semanales                  |
+| `#en-vivo`   | Transmisión en vivo | Embed de YouTube y datos de próxima transmisión      |
+| `#misiones`  | Misiones            | Proyectos misioneros y QR de donaciones              |
+| `#vision`    | Visión y Misión     | Declaraciones con versículos bíblicos                |
+| `#ubicacion` | Ubicación           | Mapa de Google Maps e información práctica           |
+| `#contacto`  | Contacto            | Teléfono, email, WhatsApp, redes y QR del formulario |
 
 ---
 

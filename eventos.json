@@ -3,8 +3,8 @@
     "id": 1,
     "titulo": "Reunión principal",
     "fecha": "Domingos 11:00 hrs / Av. Alcalde Jorge Mockeberg 581, Ñuñoa",
-    "descripcion": "Alabanza, palabra y comunión con toda la familia junto a un buen café☕. ¡Trae a un amigo!",
-    "imagen": "assets/img/reunion.avif",
+    "descripcion": "Alabanza, palabra y comunión con toda la familia junto a un buen café. ¡Trae a un amigo!",
+    "imagen": "assets/img/reunion.png",
     "activo": true
   },
   {
@@ -12,15 +12,23 @@
     "titulo": "Reunión de Oración",
     "fecha": "Jueves a las 19:30 hrs / Seminario 519, Providencia.",
     "descripcion": "Un espacio donde nos juntamos a orar por nuestras vidas, la iglesia y las necesidades presentes en nuestro entorno",
-    "imagen": "assets/img/biblia.avif",
+    "imagen": "assets/img/oracion.png",
     "activo": true
   },
   {
     "id": 3,
-    "titulo": "Reunión de Oración",
-    "fecha": "Miércoles 19:30 hrs / Seminario 519, Providencia. ",
-    "descripcion": "Un espacio donde nos juntamos a orar por nuestras vidas, la iglesia y las necesidades presentes en nuestro entorno.",
-    "imagen": "assets/img/Pray.webp",
-    "activo": false
+    "titulo": "Aprehender",
+    "fecha": "Jueves 20 de Agosto 19:30 hrs / Seminario 519, Providencia. ",
+    "descripcion": "Un espacio donde nos juntamos a estudiar y comprender la palabra de Dios, tomar cafe y hacer comunidad. ",
+    "imagen": "assets/img/aprehender.png",
+    "activo": true
+  },
+  {
+    "id": 4,
+    "titulo": "Casa Viva",
+    "fecha": "Proximamente",
+    "descripcion": "Un espacio donde nos reunimos en casa para compartir de Dios, su palabra y hacer comunidad.",
+    "imagen": "assets/img/casaviva.png",
+    "activo": true
   }
 ]
